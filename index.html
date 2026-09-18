@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GéoQuiz — quiz de géographie : carte, drapeaux et capitales</title>
+<title>GeoStudy — quiz de géographie : carte, drapeaux et capitales</title>
 <meta name="description" content="Quiz de géographie gratuit : situe les pays sur la carte du monde, reconnais les drapeaux et révise les capitales. Choisis tes pays, ton mode, et progresse à ton rythme.">
 <meta name="theme-color" content="#0d1117">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d1117'/><circle cx='16' cy='16' r='9.5' fill='none' stroke='%234d9fff' stroke-width='2'/><ellipse cx='16' cy='16' rx='4.2' ry='9.5' fill='none' stroke='%234d9fff' stroke-width='1.5'/><path d='M6.5 16h19' stroke='%234d9fff' stroke-width='1.5'/></svg>">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="GéoQuiz">
-<meta property="og:title" content="GéoQuiz — quiz de géographie sur carte du monde">
+<meta property="og:site_name" content="GeoStudy">
+<meta property="og:title" content="GeoStudy — quiz de géographie sur carte du monde">
 <meta property="og:description" content="Situe les pays sur la carte, reconnais les drapeaux, révise les capitales. Gratuit, sans compte, sans pub.">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://geo-study-iota.vercel.app/">
 <meta property="og:image" content="https://geo-study-iota.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Carte du monde du quiz GéoQuiz">
+<meta property="og:image:alt" content="Carte du monde du quiz GeoStudy">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://geo-study-iota.vercel.app/">
 <link rel="manifest" href="manifest.webmanifest">
@@ -25,7 +25,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "GéoQuiz",
+  "name": "GeoStudy",
   "url": "https://geo-study-iota.vercel.app/",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Tout navigateur web",
@@ -251,7 +251,7 @@ path.c:focus-visible{outline:none;stroke:#fff;stroke-width:2.5px;stroke-dasharra
 <body class="select">
 <div id="app">
   <header>
-    <div class="brand"><b>GéoQuiz</b><span>carte du monde</span></div>
+    <div class="brand"><b>GeoStudy</b><span>carte du monde</span></div>
     <div class="seg" id="modes" role="group" aria-label="Mode de jeu">
       <button data-mode="place" aria-pressed="true">Carte</button>
       <button data-mode="name">Pays ?</button>
@@ -826,7 +826,7 @@ $('bTerr').onclick=()=>{
 $('bWeak').onclick=()=>{
   const vus=PAYS.filter(p=>selectable(p)&&ST[p.id]);
   if(!vus.length){ say(''); alertCard('Pas encore de données',
-    '<p>Joue quelques parties : GéoQuiz retient alors les pays que tu rates et pourra te les resservir ici.</p>'); return; }
+    '<p>Joue quelques parties : GeoStudy retient alors les pays que tu rates et pourra te les resservir ici.</p>'); return; }
   const faibles=vus.filter(p=>ST[p.id].b<=2);
   const cible=(faibles.length?faibles:vus.slice().sort((a,b)=>ST[a.id].b-ST[b.id].b).slice(0,20));
   S.sel=new Set(cible.map(p=>p.id));
@@ -1226,7 +1226,7 @@ const saved=load('sel',null);
 S.sel=new Set((saved&&saved.length?saved:LISTE39).filter(id=>BY[id]));
 setScreen('select');
 $('ovCard').innerHTML=`
-  <h2>GéoQuiz</h2>
+  <h2>GeoStudy</h2>
   <p class="sub">Choisis tes pays sur la carte du monde, puis révise-les.</p>
   <p style="margin:0 0 14px;font-size:13.5px;line-height:1.6">
     <b>1.</b> Clique les pays à étudier (ou utilise les boutons par continent, la recherche, ou ta liste des 39).<br>

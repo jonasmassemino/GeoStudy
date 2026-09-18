@@ -1,6 +1,6 @@
 {
-  "name": "GéoQuiz — carte du monde",
-  "short_name": "GéoQuiz",
+  "name": "GeoStudy — carte du monde",
+  "short_name": "GeoStudy",
   "description": "Quiz de géographie : carte du monde, drapeaux et capitales, avec révision espacée.",
   "lang": "fr-FR",
   "start_url": "/",

@@ -1,5 +1,5 @@
-/* GéoQuiz — service worker : la carte reste jouable hors ligne */
-const CACHE='geoquiz-v1';
+/* GeoStudy — service worker : la carte reste jouable hors ligne */
+const CACHE='geostudy-v1';
 const SHELL=['/','/index.html','/map.json','/manifest.webmanifest','/icon-192.png','/icon-512.png'];
 
 self.addEventListener('install',e=>{
