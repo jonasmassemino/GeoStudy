@@ -7,6 +7,9 @@
 <meta name="description" content="Mentions légales du site GeoStudy : éditeur, hébergeur, propriété intellectuelle.">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="legal.css">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-192.png">
 </head>
 <body>
 <main>
@@ -18,7 +21,7 @@
   <div class="box">
     <p><b>Jonas Massé-Mino</b><br>
     23 Rue du Sablon<br>
-    Contact : <a href="mailto:JonasD3v@proton.me">JonasD3v@proton.me</a></p>
+    Contact : <a class="js-mail" data-u="JonasD3v" data-d="proton" data-t="me">JonasD3v [arobase] proton [point] me</a></p>
     <p>Statut : Création d'un site pour but éducatif.<br>
     Directeur de la publication : [JonasD3v]</p>
   </div>
@@ -59,5 +62,11 @@
 
   <footer>GeoStudy · <a href="/">Quiz</a> · <a href="/confidentialite">Confidentialité</a></footer>
 </main>
+<script>
+/* adresse reconstituée à l’affichage : absente du code source, donc invisible pour les robots collecteurs */
+document.querySelectorAll(".js-mail").forEach(function(a){
+  var m=a.dataset.u+"@"+a.dataset.d+"."+a.dataset.t; a.href="mailto:"+m; a.textContent=m;
+});
+</script>
 </body>
 </html>

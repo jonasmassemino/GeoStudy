@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GeoStudy — quiz de géographie : carte, drapeaux et capitales</title>
-<meta name="description" content="Quiz de géographie gratuit : situe les pays sur la carte du monde, reconnais les drapeaux et révise les capitales. Choisis tes pays, ton mode, et progresse à ton rythme.">
+<meta name="description" content="Quiz de géographie gratuit : situe les pays sur la carte du monde, reconnais les drapeaux, révise les capitales. Sans compte, sans pub.">
 <meta name="theme-color" content="#0d1117">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230d1117'/><circle cx='16' cy='16' r='9.5' fill='none' stroke='%234d9fff' stroke-width='2'/><ellipse cx='16' cy='16' rx='4.2' ry='9.5' fill='none' stroke='%234d9fff' stroke-width='1.5'/><path d='M6.5 16h19' stroke='%234d9fff' stroke-width='1.5'/></svg>">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GeoStudy">
 <meta property="og:title" content="GeoStudy — quiz de géographie sur carte du monde">
@@ -315,7 +316,7 @@ path.c:focus-visible{outline:none;stroke:#fff;stroke-width:2.5px;stroke-dasharra
         </div>
         <div class="selrow">
           <div class="search">
-            <input id="q" type="text" placeholder="Chercher un pays… (Entrée = ajouter / retirer)" autocomplete="off" spellcheck="false">
+            <input id="q" aria-label="Chercher un pays à ajouter ou retirer de la sélection" type="text" placeholder="Chercher un pays… (Entrée = ajouter / retirer)" autocomplete="off" spellcheck="false">
             <div id="hits"></div>
           </div>
           <div class="count"><b id="nSel">0</b> pays sélectionné<span id="nS"></span></div>
