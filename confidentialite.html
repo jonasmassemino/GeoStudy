@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Confidentialité — GeoStudy</title>
-<meta name="description" content="Politique de confidentialité de GeoStudy : aucune donnée personnelle collectée, aucun cookie, aucun traceur.">
+<meta name="description" content="Politique de confidentialité de GeoStudy : aucun compte, aucun cookie, une mesure d'audience anonyme que vous pouvez refuser en un clic.">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="legal.css">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon-192.png">
+<script defer src="/mesure-audience.js"></script>
 </head>
 <body>
 <main>
@@ -18,39 +19,78 @@
   <p class="lead">Dernière mise à jour : 17 septembre 2026</p>
 
   <div class="box">
-    <p><b>En résumé :</b> GeoStudy ne collecte aucune donnée personnelle, n'utilise aucun cookie,
-    n'emploie aucun outil de mesure d'audience et ne transmet rien à un tiers. Tout se passe
-    dans votre navigateur.</p>
+    <p><b>En résumé :</b> GeoStudy ne vous demande aucun compte, ne dépose aucun cookie et
+    n'affiche aucune publicité. Vos choix et votre progression restent dans votre navigateur.
+    Le site mesure seulement sa fréquentation, de façon anonyme et sans cookie, et vous pouvez
+    <a href="#refus">refuser cette mesure en un clic</a>.</p>
   </div>
 
-  <h2>Aucune collecte de données personnelles</h2>
+  <h2>Ce que le site ne collecte pas</h2>
   <p>Le site ne comporte ni formulaire d'inscription, ni compte utilisateur, ni champ de saisie
-  transmis à un serveur. Le champ de recherche sert uniquement à filtrer localement la liste
-  des pays affichée à l'écran&nbsp;; sa saisie n'est ni enregistrée ni envoyée.</p>
+  transmis à un serveur. Le champ de recherche et la saisie libre des réponses fonctionnent
+  uniquement sur votre appareil&nbsp;: ce que vous tapez n'est ni enregistré ni envoyé. Vos
+  réponses, vos scores et votre progression ne sont transmis à personne.</p>
 
-  <h2>Aucun cookie, aucun traceur</h2>
+  <h2>Aucun cookie</h2>
   <p>Le site ne dépose aucun cookie. Il n'intègre ni régie publicitaire, ni bouton de réseau
-  social, ni police de caractères distante, ni script tiers. C'est la raison pour laquelle
-  aucune bannière de consentement ne vous est présentée&nbsp;: il n'y a rien à consentir.</p>
+  social, ni police de caractères distante, ni script provenant d'un autre site. C'est pour cela
+  qu'aucune bannière de consentement ne vous est présentée.</p>
 
-  <h2>Stockage local de vos préférences</h2>
-  <p>Pour que vous retrouviez votre travail d'une session à l'autre, le site enregistre dans
-  le <i>stockage local</i> de votre navigateur (<code>localStorage</code>) les éléments suivants :</p>
+  <h2>Mesure d'audience</h2>
+  <p>Pour savoir combien de personnes utilisent GeoStudy et d'où elles viennent, le site utilise
+  <b>Vercel Web Analytics</b>, un service de Vercel Inc., qui est déjà l'hébergeur du site.
+  À chaque page consultée, les informations suivantes sont transmises&nbsp;:</p>
   <ul>
-    <li><code>gq:sel</code> — la liste des pays que vous avez sélectionnés ;</li>
-    <li><code>gq:mode</code> — le mode de jeu choisi ;</li>
-    <li><code>gq:terr</code> — l'affichage ou non des territoires et dépendances ;</li>
-    <li><code>gq:best:…</code> — vos meilleurs scores et temps.</li>
+    <li>la page consultée, la date et l'heure&nbsp;;</li>
+    <li>le site d'où vous arrivez, s'il y en a un&nbsp;;</li>
+    <li>une localisation approximative (pays, région, ville)&nbsp;;</li>
+    <li>le navigateur, le système d'exploitation et le type d'appareil (mobile, tablette, ordinateur).</li>
   </ul>
-  <p>Ces informations ne quittent jamais votre appareil, ne permettent pas de vous identifier
-  et ne sont lues par personne d'autre que le site lui-même. Strictement nécessaires au
-  fonctionnement du service que vous avez demandé, elles sont dispensées de consentement
-  préalable au sens de l'article 82 de la loi Informatique et Libertés.</p>
+  <p>Aucun cookie n'est utilisé et rien n'est enregistré sur votre appareil pour cette mesure.
+  Un même visiteur est reconnu pendant 24&nbsp;heures au plus, grâce à une empreinte calculée à
+  partir de sa connexion, puis cette empreinte est effacée. Les statistiques obtenues sont
+  anonymes et agrégées&nbsp;: elles ne sont rattachées ni à votre adresse IP, ni à votre identité,
+  et ne permettent pas de vous suivre sur d'autres sites.</p>
+  <p>Cette mesure repose sur l'intérêt légitime de l'éditeur à connaître la fréquentation de son
+  site pour l'améliorer (article 6.1.f du RGPD). L'éditeur consulte ces statistiques sur une
+  période glissante d'un mois. Voir la
+  <a href="https://vercel.com/docs/analytics/privacy-policy" rel="noopener">documentation de
+  Vercel sur la confidentialité de Web Analytics</a>.</p>
+
+  <h3 id="refus" style="font-size:15px;margin:22px 0 6px">Refuser la mesure d'audience</h3>
+  <p>Si votre navigateur envoie le signal <i>Do Not Track</i> ou <i>Global Privacy Control</i>,
+  aucune mesure n'est effectuée. Vous pouvez aussi la refuser ici&nbsp;; votre choix vaut pour
+  tout le site, sur ce navigateur.</p>
+  <div class="box">
+    <p id="optout-etat" style="margin:0 0 10px">Sans JavaScript, aucune mesure n'est effectuée.</p>
+    <button class="btn" id="optout" type="button" hidden>Ne plus être compté</button>
+  </div>
+
+  <h2>Ce qui est enregistré sur votre appareil</h2>
+  <p>Pour que vous retrouviez votre travail d'une session à l'autre, le site enregistre dans
+  le <i>stockage local</i> de votre navigateur (<code>localStorage</code>)&nbsp;:</p>
+  <ul>
+    <li><code>gq:sel</code> — la liste des pays que vous avez sélectionnés&nbsp;;</li>
+    <li><code>gq:mode</code> — le mode de jeu choisi&nbsp;;</li>
+    <li><code>gq:terr</code> — l'affichage ou non des territoires et dépendances&nbsp;;</li>
+    <li><code>gq:smart</code>, <code>gq:typing</code>, <code>gq:exam</code> — les options
+      Révision intelligente, Saisie libre et Mode examen&nbsp;;</li>
+    <li><code>gq:stats</code> — votre progression pays par pays (niveau, bonnes et mauvaises
+      réponses, date de dernière révision)&nbsp;;</li>
+    <li><code>gq:best:…</code> — vos meilleurs scores et temps&nbsp;;</li>
+    <li><code>gq:noanalytics</code> — uniquement si vous refusez la mesure d'audience, pour
+      mémoriser ce refus.</li>
+  </ul>
+  <p>Votre navigateur conserve aussi une copie des fichiers du site (page, carte, icônes) pour
+  qu'il fonctionne sans connexion. Ce cache ne contient aucune information vous concernant.</p>
+  <p>Ces éléments ne quittent jamais votre appareil et ne sont lus par personne d'autre que le
+  site lui-même. Strictement nécessaires au service que vous utilisez, ils sont dispensés de
+  consentement préalable au sens de l'article 82 de la loi Informatique et Libertés.</p>
 
   <h2>Comment les effacer</h2>
   <p>Effacer les données de site pour ce domaine dans les réglages de votre navigateur supprime
-  définitivement l'ensemble de ces éléments, y compris vos records. Aucune copie n'en subsiste
-  ailleurs.</p>
+  définitivement l'ensemble de ces éléments, y compris vos records et votre progression. Aucune
+  copie n'en subsiste ailleurs.</p>
 
   <h2>Journaux techniques de l'hébergeur</h2>
   <p>L'hébergeur, Vercel Inc., conserve pour son propre compte des journaux de connexion
@@ -60,13 +100,38 @@
   confidentialité de Vercel</a>.</p>
 
   <h2>Vos droits</h2>
-  <p>Aucun traitement de données personnelles n'étant réalisé par l'éditeur, les droits d'accès,
-  de rectification et d'effacement prévus par le RGPD n'ont pas d'objet ici. Vous pouvez
-  néanmoins écrire à l'adresse figurant dans les <a href="/mentions-legales">mentions légales</a>
-  pour toute question, et adresser une réclamation à la CNIL
-  (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+  <p>Les statistiques de fréquentation étant anonymes et agrégées, l'éditeur n'est pas en mesure
+  de retrouver les données d'un visiteur en particulier (article 11 du RGPD). Vous pouvez en
+  revanche vous opposer à la mesure à tout moment, avec le bouton <a href="#refus">ci-dessus</a>.
+  Pour toute question, écrivez à l'adresse figurant dans les
+  <a href="/mentions-legales">mentions légales</a>. Vous pouvez aussi adresser une réclamation
+  à la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
 
   <footer>GeoStudy · <a href="/">Quiz</a> · <a href="/mentions-legales">Mentions légales</a></footer>
 </main>
+<script>
+/* refus de la mesure d'audience : mémorisé dans ce navigateur, lu par /mesure-audience.js */
+(function () {
+  var b = document.getElementById('optout'), e = document.getElementById('optout-etat');
+  var signal = navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true;
+  function refuse() { try { return localStorage.getItem('gq:noanalytics') === '1'; } catch (x) { return false; } }
+  function maj() {
+    if (signal) {
+      e.textContent = 'Votre navigateur envoie un signal de refus : vos visites ne sont pas comptées.';
+      b.hidden = true; return;
+    }
+    var r = refuse();
+    e.textContent = r ? 'Vos visites ne sont plus comptées sur ce navigateur.'
+                      : 'Vos visites sont actuellement comptées, de façon anonyme.';
+    b.textContent = r ? 'Réactiver la mesure d’audience' : 'Ne plus être compté';
+    b.hidden = false;
+  }
+  b.addEventListener('click', function () {
+    try { if (refuse()) localStorage.removeItem('gq:noanalytics'); else localStorage.setItem('gq:noanalytics', '1'); } catch (x) {}
+    maj();
+  });
+  maj();
+})();
+</script>
 </body>
 </html>

@@ -13,3 +13,7 @@ p,li{color:var(--ink)}
 .back:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
 footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px}
 code{background:var(--panel);padding:1px 5px;border-radius:4px;font-size:13px}
+.btn{font:inherit;font-size:13.5px;padding:8px 14px;border-radius:9px;border:1px solid var(--line);
+  background:var(--bg);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--acc)}
+.btn:focus-visible{outline:2px solid var(--acc);outline-offset:2px}

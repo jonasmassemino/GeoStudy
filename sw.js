@@ -12,7 +12,9 @@ self.addEventListener('activate',e=>{
 });
 self.addEventListener('fetch',e=>{
   const req=e.request;
-  if(req.method!=='GET'||new URL(req.url).origin!==location.origin) return;
+  const url=new URL(req.url);
+  /* la mesure d'audience ne passe jamais par le cache */
+  if(req.method!=='GET'||url.origin!==location.origin||url.pathname.startsWith('/_vercel/')) return;
 
   /* le fond de carte ne change jamais : cache d'abord */
   if(req.url.endsWith('/map.json')){
